@@ -1,0 +1,14 @@
+backEnd:
+   url: http://localhost:8080
+
+---
+server:
+  port: 8081
+
+---
+passwordEncoder:
+    class:  org.springframework.security.crypto.password.PasswordEncoder
+    properties: BCryptPasswordEncoder
+
+
+
