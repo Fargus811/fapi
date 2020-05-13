@@ -54,7 +54,7 @@ public class UserService {
     public HttpStatus login(String email, String password) {
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(backendUrl + "/login")
                 .queryParam("email", email)
-                .queryParam("page", password);
+                .queryParam("password", password);
         return restTemplate.getForObject(builder.toUriString(), HttpStatus.class);
 
     }

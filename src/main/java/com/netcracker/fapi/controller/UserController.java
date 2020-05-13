@@ -1,5 +1,6 @@
 package com.netcracker.fapi.controller;
 
+import com.netcracker.fapi.entity.LoginRequest;
 import com.netcracker.fapi.entity.User;
 import com.netcracker.fapi.entity.UserViewModel;
 import com.netcracker.fapi.service.UserService;
@@ -32,8 +33,8 @@ public class UserController {
         return userService.createUser(user);
     }
     @GetMapping ("/login")
-    public HttpStatus login(@RequestParam (name = "email") String email, @RequestParam (name = "password")String password) {
-        return userService.login(email, password);
+    public HttpStatus login(@RequestBody LoginRequest loginRequest) {
+        return userService.login(loginRequest.getEmail(), loginRequest.getPassword());
     }
 
 }
