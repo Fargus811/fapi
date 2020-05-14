@@ -37,6 +37,6 @@ public class SubscriptionController {
     public BigInteger сountAllSubscribes(@PathVariable Long serviceId) {
         return subscriptionService.countBySubuService(serviceId);
     }
-
+//2 hours
 }
 
